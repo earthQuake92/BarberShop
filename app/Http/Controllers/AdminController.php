@@ -121,4 +121,21 @@ class AdminController extends Controller
       else
         return response()->json("Errore elemento non presente (da aggiornare con cod 204) ",200);
     }
+
+
+         /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function showImpresaByAdmin($id){
+    
+     $impresa = Admin::find($id)->impresa;
+      
+      if(isset($impresa))
+         return response()->json($impresa,200);
+      else
+        return response()->json("Errore elemento non presente (da aggiornare con cod 204) ",200);
+    }
 }

@@ -13,8 +13,8 @@ class Admin extends Model
 
 
 
-	public function user(){
-		return $this->belongsTo('App\Impresa', 'foreign_key', 'Admin_Id_Admin');
+	public function impresa(){
+		return $this->belongsTo('App\Impresa', 'Id_Admin','Admin_Id_Admin');
 	}
 
     public function services()

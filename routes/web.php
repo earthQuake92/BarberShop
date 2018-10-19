@@ -25,6 +25,7 @@
  
 Route::get('admins', 'AdminController@index');
 Route::get('admin/{id}', 'AdminController@show');
+Route::get('admin/{id}/impresa', 'AdminController@showImpresaByAdmin');
 Route::get('admin/{id}/services', 'AdminController@showsAllServiceByAdmin');
 Route::get('admin/{id_admin}/service/{id_service}', 'AdminController@showServiceByAdmin');
 Route::post('admin/store', 'AdminController@store');

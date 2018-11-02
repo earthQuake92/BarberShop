@@ -104,6 +104,16 @@ Route::delete('prenotazione/{id}/destroy', 'PrenotazioneController@destroy');
 
 
 
+/*
+ * ***** ROUTE RAFFAELE ****
+ *
+ * 
+ */
+
+Route::post('template/{id}', 'TemplateController@store');
+Route::get('template/{id}', 'TemplateController@show');
+
+
 Route::get('/', function () {
     return view('welcome');
 });

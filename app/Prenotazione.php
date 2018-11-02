@@ -21,7 +21,7 @@ class Prenotazione extends Model
     
     public function service()
     {
-        return $this->belongsToMany('App\Service', 'prenotazione_has_service', 'Prenotazione_IdPrenotazione', 'Service_IdService');
+        return $this->belongsToMany('App\Service', 'prenotazione_has_service', 'Prenotazione_Id_Prenotazione', 'Service_Id_Service');
     }
 
 }

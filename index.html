@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+
+<h2>HTML Forms</h2>
+
+
+
+<form  >
+  First name:<br>
+  <input id="cazzo" type="text">
+  <button onclick="myFunction()">Cliccami</button>
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+<script>
+
+	var porco = {Template:[{Index:0,Orari:[{Nome: "soret",Da: "8",A:"10"},            
+	                                       {Nome: "cazzo",Da: "9",A:"11"}]},
+	                       {Index:1,Orari:[{Nome: "pizza",Da: "13",A:"18"},            
+	                                       {Nome: "milan",Da: "9",A:"19"}]}      
+	                                     ] };
+function myFunction(){
+console.log("soa");
+	$.post( "http://localhost/Laravel/MyApp/public/template/APACHE",JSON.stringify(porco));}
+</script>
+</body>
+</html>
